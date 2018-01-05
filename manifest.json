@@ -1,18 +1,24 @@
 {
   "name": "Medium Automatic Sign-In",
-  "description": "Automatic sign-in for Medium-based publications.",
-  "version": "1.0",
+  "description":
+    "Automatic sign-in for Medium-based publications with custom domains.",
+  "version": "1.0.2",
   "manifest_version": 2,
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png",
-    "256": "icon256.png"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "content_scripts": [
     {
       "matches": ["*://*/*"],
       "js": ["index.js"]
     }
-  ]
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png"
+    }
+  }
 }
