@@ -11,8 +11,12 @@ function handleNodeInserted(e) {
   }
 }
 
-const body = document.querySelector("body");
-body.addEventListener("DOMNodeInserted", handleNodeInserted);
+const body = document.querySelector(
+  "body.browser-chrome.os-mac.is-withMagicUnderlinesv-glyph.v-glyph--m2.is-js.is-withMagicUnderlines"
+);
+if (body) {
+  body.addEventListener("DOMNodeInserted", handleNodeInserted);
+}
 
 const userButton = document.querySelector(".js-userActions");
 if (!userButton) {
